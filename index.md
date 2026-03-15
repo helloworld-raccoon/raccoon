@@ -95,21 +95,39 @@ title: Home
 
 <section class="content-section">
   <div class="section-heading">
-    <p class="eyebrow">Blog Direction</p>
-    <h2>기술 블로그에서 다루는 내용</h2>
+    <p class="eyebrow">Latest Posts</p>
+    <h2>기술 블로그 미리보기</h2>
+    <p>학습 정리, 문제 해결 기록, 프로젝트 회고를 최신 글 중심으로 살펴볼 수 있습니다.</p>
   </div>
-  <div class="blog-grid">
-    <article class="panel">
-      <h3>문제 해결 기록</h3>
-      <p>오류 원인 분석, 해결 과정, 다시 같은 문제를 만났을 때의 체크포인트를 정리합니다.</p>
-    </article>
-    <article class="panel">
-      <h3>학습 정리</h3>
-      <p>Java, SQL, 웹 개발 기초처럼 개념 이해가 중요한 주제를 제 언어로 다시 설명합니다.</p>
-    </article>
-    <article class="panel">
-      <h3>프로젝트 회고</h3>
-      <p>기능 구현보다 한 단계 더 나아가 설계 선택, 아쉬웠던 점, 다음 개선 방향까지 기록합니다.</p>
-    </article>
-  </div>
+  {% assign featured_posts = site.posts | slice: 0, 3 %}
+  {% if featured_posts.size > 0 %}
+    <div class="blog-grid">
+      {% for post in featured_posts %}
+        <a class="post-card-link" href="{{ post.url | relative_url }}">
+          <article class="post-card">
+            <p class="project-label">{{ post.category_label | default: "Tech Note" }}</p>
+            <h3>{{ post.title }}</h3>
+            <p class="post-meta">{{ post.date | date: "%Y.%m.%d" }}</p>
+            <p class="post-excerpt">
+              {{ post.excerpt | strip_html | strip_newlines | truncate: 120 }}
+            </p>
+            {% if post.tags %}
+              <div class="chip-list compact">
+                {% for tag in post.tags limit:3 %}
+                  <span class="chip"># {{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <p class="post-cta">게시글 자세히 보기</p>
+          </article>
+        </a>
+      {% endfor %}
+    </div>
+    <p class="view-all-posts"><a href="{{ '/blog/' | relative_url }}">전체 게시글 보기</a></p>
+  {% else %}
+    <div class="panel">
+      <h3>첫 번째 게시글을 준비해보세요.</h3>
+      <p>`_posts` 폴더에 Markdown 파일을 추가하면 이 영역에 자동으로 미리보기가 표시됩니다.</p>
+    </div>
+  {% endif %}
 </section>

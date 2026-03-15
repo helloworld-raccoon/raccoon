@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<article class="post-layout">
+  <header class="post-header-card">
+    <p class="eyebrow">{{ page.category_label | default: "Tech Note" }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%Y.%m.%d" }}</p>
+    {% if page.tags %}
+      <div class="chip-list compact">
+        {% for tag in page.tags %}
+          <span class="chip"># {{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
+
+  <p class="back-link"><a href="{{ '/blog/' | relative_url }}">전체 게시글로 돌아가기</a></p>
+</article>
+
