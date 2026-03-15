@@ -1,0 +1,28 @@
+- category: Language
+  items:
+    - Java
+    - SQL
+    - HTML5
+    - CSS3
+    - JavaScript
+
+- category: Backend
+  items:
+    - JDBC
+    - Servlet
+    - Jekyll
+    - REST API Basics
+
+- category: Database
+  items:
+    - MySQL
+    - ERD Design
+    - Query Optimization Basics
+
+- category: Tools
+  items:
+    - Git
+    - GitHub
+    - VS Code
+    - IntelliJ IDEA
+

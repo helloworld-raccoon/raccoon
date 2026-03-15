@@ -1,0 +1,39 @@
+- name: 학습 기록 블로그
+  type: Personal Blog
+  summary: 배운 내용을 정리하고 문제 해결 과정을 기록하는 GitHub Pages 기반 기술 블로그입니다.
+  points:
+    - Markdown과 Jekyll 구조를 익히며 콘텐츠를 꾸준히 누적할 수 있는 환경을 만들었습니다.
+    - 단순한 일기형 기록이 아니라 다시 참고할 수 있는 학습 문서 형태를 지향했습니다.
+  stack:
+    - GitHub Pages
+    - Jekyll
+    - Markdown
+    - SCSS
+  link: /
+
+- name: 도서 관리 콘솔 프로그램
+  type: Team / Practice
+  summary: Java와 MySQL을 활용해 도서 등록, 조회, 대여 상태 관리를 구현한 학습형 프로젝트입니다.
+  points:
+    - 데이터 입출력 흐름을 직접 설계하며 CRUD 구조를 익혔습니다.
+    - 예외 상황 처리와 SQL 쿼리 작성 경험을 통해 백엔드 기초를 다졌습니다.
+  stack:
+    - Java
+    - JDBC
+    - MySQL
+    - Git
+  link:
+
+- name: 학생용 일정 관리 웹 서비스
+  type: Side Project
+  summary: 학업 일정과 할 일을 한눈에 관리할 수 있도록 기획한 웹 프로젝트 콘셉트입니다.
+  points:
+    - 사용자 입장에서 필요한 기능을 정의하고 화면 흐름을 먼저 설계하는 연습을 했습니다.
+    - 추후 로그인, 일정 공유, 우선순위 분류 기능까지 확장하는 것을 목표로 하고 있습니다.
+  stack:
+    - HTML
+    - CSS
+    - JavaScript
+    - MySQL
+  link:
+
